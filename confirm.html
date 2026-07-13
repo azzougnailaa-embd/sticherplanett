@@ -17,7 +17,7 @@
   <div style="padding: 30px 0 60px; display:flex; justify-content:center;">
     <div class="panel">
       <h1>Confirme ton paiement</h1>
-      <p style="color:var(--ink-soft); margin-top:-6px;">Remplis tes infos, puis envoie-nous ton reçu par email. On te fait parvenir ton PDF dès vérification.</p>
+      <p style="color:var(--ink-soft); margin-top:-6px;">Envoie-nous ton reçu par email avec ta référence de commande. On te fait parvenir ton PDF dès vérification.</p>
 
       <div class="order-summary" id="order-summary">
         <!-- généré par js/main.js -->
@@ -28,31 +28,9 @@
         <p id="order-reference" style="font-size:1.3rem; font-weight:700; margin:0;">—</p>
       </div>
 
-      <!--
-        IMPORTANT : remplace l'action ci-dessous par ton propre endpoint Formspree
-        (ou tout autre service de formulaire). Voir les instructions données à la fin.
-      -->
-      <form id="proof-form" action="https://formspree.io/f/REMPLACE_PAR_TON_ID" method="POST">
-        <input type="hidden" name="product" id="field-product" />
-        <input type="hidden" name="quantity" id="field-quantity" />
-        <input type="hidden" name="total" id="field-total" />
-        <input type="hidden" name="reference" id="field-reference" />
-
-        <label for="name">Nom complet</label>
-        <input type="text" id="name" name="name" required />
-
-        <label for="email">Email (pour recevoir le PDF)</label>
-        <input type="email" id="email" name="email" required />
-
-        <label for="phone">Téléphone (optionnel)</label>
-        <input type="tel" id="phone" name="phone" />
-
-        <button type="submit" class="btn full" style="margin-top:24px;">Envoyer mes informations</button>
-      </form>
-
       <div style="margin-top:24px; padding-top:20px; border-top:2px dashed var(--ink-soft);">
         <p style="font-weight:600; margin-bottom:8px;">Dernière étape : envoie ton reçu de paiement</p>
-        <p style="color:var(--ink-soft); margin-top:0;">Envoie une capture d'écran ou une photo de ton reçu Baridi Mob à <strong>mystickerplanett@gmail.com</strong>, avec ta référence de commande dans l'objet du mail.</p>
+        <p style="color:var(--ink-soft); margin-top:0;">Clique sur le bouton ci-dessous : ton application email va s'ouvrir avec toutes les infos de ta commande déjà remplies. Il ne te reste plus qu'à joindre une capture d'écran ou une photo de ton reçu Baridi Mob avant d'envoyer.</p>
         <a id="send-receipt-btn" href="#" class="btn full" style="margin-top:10px; display:inline-block; text-align:center;">📧 Ouvrir mon email pour envoyer le reçu</a>
       </div>
     </div>
