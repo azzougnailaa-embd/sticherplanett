@@ -172,13 +172,7 @@ function renderConfirm() {
     <div class="row total"><span>Total</span><span>${formatPrice(total)}</span></div>
   `;
 
-  // Génère une référence de commande unique (ex: SR-M3F8K2)
   const reference = "SR-" + Date.now().toString(36).toUpperCase();
-
-  document.getElementById("field-product").value = product.name;
-  document.getElementById("field-quantity").value = qty;
-  document.getElementById("field-total").value = total;
-  document.getElementById("field-reference").value = reference;
 
   const refBox = document.getElementById("order-reference");
   if (refBox) refBox.textContent = reference;
@@ -191,31 +185,6 @@ function renderConfirm() {
     );
     mailBtn.href = `mailto:mystickerplanett@gmail.com?subject=${subject}&body=${body}`;
   }
-
-  const form = document.getElementById("proof-form");
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const submitBtn = form.querySelector("button[type=submit]");
-    submitBtn.disabled = true;
-    submitBtn.textContent = "Envoi en cours...";
-
-    try {
-      const res = await fetch(form.action, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { Accept: "application/json" },
-      });
-      if (res.ok) {
-        window.location.href = "thankyou.html";
-      } else {
-        throw new Error("Échec de l'envoi");
-      }
-    } catch (err) {
-      alert("Une erreur est survenue lors de l'envoi. Réessaie, ou contacte-nous directement.");
-      submitBtn.disabled = false;
-      submitBtn.textContent = "Envoyer ma preuve de paiement";
-    }
-  });
 }
 
 renderCategories();
