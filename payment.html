@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Paiement — StickR</title>
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="wrap">
+  <header class="site">
+    <a href="index.html" class="brand">🏷️ StickR <span class="tab">.pdf</span></a>
+  </header>
+
+  <a href="#" class="btn-link" id="back-link" style="margin-top:18px;">&larr; retour au produit</a>
+
+  <div style="padding: 10px 0 60px; display:flex; justify-content:center;">
+    <div class="panel">
+      <h1>Finaliser le paiement</h1>
+      <p style="color:var(--ink-soft); margin-top:-6px;">Effectue le virement ci-dessous, puis confirme ton paiement.</p>
+
+      <div class="order-summary" id="order-summary">
+        <!-- généré par js/main.js -->
+      </div>
+
+      <div class="bank-box" id="bank-box">
+        <div><span class="label">Bénéficiaire :</span> [ Ton nom / nom de la boutique ]</div>
+        <div><span class="label">CCP :</span> [ Ton numéro CCP ]</div>
+        <div><span class="label">Clé :</span> [ Clé RIP ]</div>
+        <div><span class="label">BaridiMob :</span> [ Ton numéro BaridiMob ]</div>
+      </div>
+
+      <div class="note">
+        ⚠️ Indique bien le <strong>montant exact</strong> lors du virement. Garde une capture d'écran ou une photo du reçu, elle te sera demandée à l'étape suivante.
+      </div>
+
+      <a href="#" id="paid-btn" class="btn full" style="margin-top:24px;">J'ai effectué le paiement →</a>
+    </div>
+  </div>
+
+  <footer class="site">Paiement par virement bancaire · Livraison du PDF par email après vérification</footer>
+</div>
+
+<script src="js/products.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
