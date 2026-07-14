@@ -4,20 +4,24 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Confirmer mon paiement — StickR</title>
-<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="../css/style.css" />
 
 </head>
 <body>
 
 <div class="wrap">
   <header class="site">
-    <a href="index.html" class="brand">🏷️ StickR <span class="tab">.pdf</span></a>
+     <a href="index.html" class="brand">🏷️ StickR <span class="tab">.pdf</span></a>
+<a href="cart.html" style="position:relative; text-decoration:none; font-size:1.5rem; margin-left:auto;">
+  🛒
+  <span id="cart-count" style="position:absolute; top:-8px; right:-10px; background:var(--pink); color:#fff; font-size:0.7rem; font-weight:700; border-radius:50%; width:20px; height:20px; display:flex; align-items:center; justify-content:center;">0</span>
+</a>
   </header>
 
   <div style="padding: 30px 0 60px; display:flex; justify-content:center;">
     <div class="panel">
       <h1>Confirme ton paiement</h1>
-      <p style="color:var(--ink-soft); margin-top:-6px;">Envoie-nous ton reçu par email avec ta référence de commande. On te fait parvenir ton PDF dès vérification.</p>
+      <p style="color:var(--ink-soft); margin-top:-6px;">Remplis tes infos, puis envoie-nous ton reçu par email. On te fait parvenir ton PDF dès vérification.</p>
 
       <div class="order-summary" id="order-summary">
         <!-- généré par js/main.js -->
@@ -28,9 +32,15 @@
         <p id="order-reference" style="font-size:1.3rem; font-weight:700; margin:0;">—</p>
       </div>
 
+      <label for="client-name" style="display:block; font-weight:600; margin-bottom:6px;">Nom et prénom</label>
+      <input type="text" id="client-name" placeholder="Ton nom complet" style="width:100%; padding:10px; border:2px solid var(--ink); border-radius:8px; margin-bottom:16px; box-sizing:border-box;" required />
+
+      <label for="client-phone" style="display:block; font-weight:600; margin-bottom:6px;">Numéro de téléphone</label>
+      <input type="tel" id="client-phone" placeholder="Ex: 0556930825" style="width:100%; padding:10px; border:2px solid var(--ink); border-radius:8px; margin-bottom:16px; box-sizing:border-box;" required />
+
       <div style="margin-top:24px; padding-top:20px; border-top:2px dashed var(--ink-soft);">
         <p style="font-weight:600; margin-bottom:8px;">Dernière étape : envoie ton reçu de paiement</p>
-        <p style="color:var(--ink-soft); margin-top:0;">Clique sur le bouton ci-dessous : ton application email va s'ouvrir avec toutes les infos de ta commande déjà remplies. Il ne te reste plus qu'à joindre une capture d'écran ou une photo de ton reçu Baridi Mob avant d'envoyer.</p>
+        <p style="color:var(--ink-soft); margin-top:0;">Clique sur le bouton ci-dessous : ton application email va s'ouvrir avec toutes les infos déjà remplies. Il ne te reste plus qu'à joindre une capture d'écran ou une photo de ton reçu Baridi Mob avant d'envoyer.</p>
         <a id="send-receipt-btn" href="#" class="btn full" style="margin-top:10px; display:inline-block; text-align:center;">📧 Ouvrir mon email pour envoyer le reçu</a>
       </div>
     </div>
@@ -39,8 +49,7 @@
   <footer class="site">Paiement par virement bancaire · Livraison du PDF par email après vérification</footer>
 </div>
 
-
-<script src="js/products.js"></script>
-<script src="js/main.js"></script>
+<script src="../js/products.js"></script>
+<script src="../js/main.js"></script>
 </body>
 </html>
